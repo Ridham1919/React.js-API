@@ -30,7 +30,6 @@ const InsertDelete = () => {
       .then(function (abc) {
         if (abc.data.status === "true") {
           fetchdata();
-          
         }
       });
   };
