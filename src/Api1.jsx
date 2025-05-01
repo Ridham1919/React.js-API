@@ -7,6 +7,7 @@ const Api1 = () => {
     useEffect(() => {
         axios.get('https://geton.skmbpk1z.a2hosted.com/get-data.php').then(function (abc) {
             setData(abc.data);
+            
         })
     }, [])
 
