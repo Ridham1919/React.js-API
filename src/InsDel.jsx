@@ -29,7 +29,7 @@ const InsertDelete = () => {
       .post("https://geton.skmbpk1z.a2hosted.com/delete-data.php", a)
       .then(function (abc) {
         if (abc.data.status === "true") {
-          fetchdata();
+          fetchdata( );
         }
       });
   };
