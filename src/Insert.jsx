@@ -10,6 +10,7 @@ const Insert = () => {
         e.preventDefault();
 
         var name = txtname.current.value;
+        
         var email = txtemail.current.value;
         var password = txtpassword.current.value;
 
