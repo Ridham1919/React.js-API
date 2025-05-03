@@ -20,6 +20,7 @@ const Update = () => {
     },[])
 
     const handlesubmit = (e) =>{
+        
         e.preventDefault();
 
         var name = txtname.current.value;
