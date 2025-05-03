@@ -1,9 +1,10 @@
 import React,{useEffect,useRef,useState} from "react";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom';
 
 const Delete = () => {
     var [data,setData] = useState([])
-
+    var navigate = useNavigate()
     useEffect(() => {
         fetchdata()
     },[])
@@ -14,8 +15,7 @@ const Delete = () => {
         })
     }
 
-
-const handledelete = (e) => {
+const handleDelete = (e) => {
     var id = e.target.getAttribute('data');
     var a = new FormData();
     a.set('id',id)
@@ -26,6 +26,12 @@ const handledelete = (e) => {
             }
         })
      }
+
+     const handleUpdate = (e) =>{
+        var id = e.target.getAttribute('data');
+
+        navigate('/edit/'+id)
+     }
      return(
         <>
         <table border={1} cellPadding={7} cellSpacing={0.1}>
@@ -34,6 +40,7 @@ const handledelete = (e) => {
                 <th>name</th>
                 <th>email</th>
                 <th>password</th>
+                <th>Action</th>
                 <th>Action</th>
             </tr>
             {
@@ -46,7 +53,10 @@ const handledelete = (e) => {
                                 <td>{e.email}</td>
                                 <td>{e.password}</td>
                                 <td>
-                                    <button onClick={handledelete} data={e.id}>Delete</button>
+                                    <button onClick={handleDelete} data={e.id}>Delete</button>
+                                </td>
+                                <td>
+                                    <button onClick={handleUpdate} data={e.id}>Update</button>
                                 </td>
                             </tr>
                         </>
