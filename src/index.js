@@ -6,13 +6,14 @@ import Delete from './Delete';
 import InsertDelete from './InsDel';
 import Update from './Update';
 import { BrowserRouter,Route,Routes } from "react-router-dom";
+import Login from './Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     
  <>
   <BrowserRouter>
-  <Insert/>
+  <Login/>
   <Routes>
         <Route path="/" element={ <Delete/> } />
         <Route path="/edit/:id" element={ <Update/>} />
