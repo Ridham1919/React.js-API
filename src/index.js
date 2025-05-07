@@ -13,7 +13,6 @@ root.render(
  <>
   <BrowserRouter>
   <Routes>
-      
         {/* <Route path="/" element={<Insert/>} /> */}
         <Route path="/" element={ <Delete/> } />
         <Route path="/Login" element={ <Login/> } />
