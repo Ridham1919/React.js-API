@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import Insert from './Insert';
 import Api1 from './Api1';
 import Delete from './Delete';
-import InsertDelete from './InsDel';
 import Update from './Update';
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import Login from './Login';
@@ -13,9 +12,10 @@ root.render(
     
  <>
   <BrowserRouter>
-  <Login/>
   <Routes>
-        <Route path="/" element={ <Delete/> } />
+        <Route path="/Delete" element={ <Delete/> } />
+        <Route path="/Login" element={ <Login/> } />
+        {/* <Route path="/Api1" element={<Api1/>} /> */}
         <Route path="/edit/:id" element={ <Update/>} />
   </Routes>
   </BrowserRouter>

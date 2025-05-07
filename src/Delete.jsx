@@ -29,11 +29,14 @@ const handleDelete = (e) => {
 
      const handleUpdate = (e) =>{
         var id = e.target.getAttribute('data');
-
         navigate('/edit/'+id)
      }
+      const handleLogout = () =>{
+        navigate('/Login')
+      }
      return(
         <>
+        <button onClick={handleLogout}>Loguot</button>
         <table border={1} cellPadding={7} cellSpacing={0.1}>
             <tr>
                 <th>id</th>
