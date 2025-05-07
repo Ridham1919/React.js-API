@@ -13,7 +13,8 @@ root.render(
  <>
   <BrowserRouter>
   <Routes>
-        <Route path="/Delete" element={ <Delete/> } />
+        {/* <Route path="/" element={<Insert/>} /> */}
+        <Route path="/" element={ <Delete/> } />
         <Route path="/Login" element={ <Login/> } />
         {/* <Route path="/Api1" element={<Api1/>} /> */}
         <Route path="/edit/:id" element={ <Update/>} />

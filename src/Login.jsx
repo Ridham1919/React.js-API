@@ -17,14 +17,13 @@ const Login = () => {
         var password = txtpassword.current.value;
 
         var a = new FormData()
-
        
         a.set('email',email)
         a.set('password',password)
 
-        axios.post('https://geton.skmbpk1z.a2hosted.com/insert-data.php',a).then(function(abc){
+        axios.post('https://geton.skmbpk1z.a2hosted.com/login-data.php',a).then(function(abc){
              if(abc.data.status == "true"){
-                navigate('/Delete')
+                navigate('/')
              }
         })
     }
